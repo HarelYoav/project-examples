@@ -15,7 +15,9 @@
  */
 plugins {
     id("com.jfrog.artifactory") version "5.+"
+    id 'org.springframework.boot' version '3.1.4'
 }
+
 
 allprojects {
     repositories {
@@ -38,6 +40,8 @@ configurations {
 dependencies {
     testImplementation 'junit:junit:4.7'
     smokeTest 'org.apache.httpcomponents:httpclient:4.5.5'
+    implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
 }
 
 publishing {
