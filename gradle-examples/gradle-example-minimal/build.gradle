@@ -27,6 +27,11 @@ allprojects {
     }
 }
 
+compileOptions {
+    sourceCompatibility 11
+    targetCompatibility 11
+}
+
 version = currentVersion
 
 apply plugin: 'com.jfrog.artifactory'
