@@ -33,6 +33,7 @@ apply plugin: 'maven-publish'
 
 dependencies {
     testImplementation 'junit:junit:4.7'
+    smokeTest 'org.apache.httpcomponents:httpclient:4.5.5'
 }
 
 publishing {
