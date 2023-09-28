@@ -29,7 +29,7 @@ allprojects {
     status = 'Integration'
     repositories {
         maven {
-            url "http://arti.com/artifactory/gradle-gradle-release"
+            url "https://repo1.maven.org/maven2/"
             allowInsecureProtocol = true
         }
     }
