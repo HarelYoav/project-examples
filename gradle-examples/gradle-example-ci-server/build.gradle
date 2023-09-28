@@ -23,8 +23,11 @@ allprojects {
   status = 'integration'
 
   repositories {
-    mavenCentral()
-    allowInsecureProtocol = true
+    // mavenCentral()
+           maven {
+            url "https://repo1.maven.org/maven2/"
+            allowInsecureProtocol = true
+        }
   }
 }
 
