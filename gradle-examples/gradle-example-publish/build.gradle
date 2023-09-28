@@ -29,7 +29,7 @@ allprojects {
     status = 'Integration'
     repositories {
         maven {
-            url "http://127.0.0.1:8081/artifactory/libs-release"
+            url "http://arti.com/artifactory/gradle-gradle-release"
         }
     }
 }
@@ -93,12 +93,12 @@ artifactory {
     clientConfig.setIncludeEnvVars(true)
     clientConfig.info.addEnvironmentProperty('test.adding.dynVar',new java.util.Date().toString())
 
-    contextUrl = 'http://127.0.0.1:8081/artifactory'
+    contextUrl = 'http://arti.com/artifactory'
     publish {
         repository {
-            repoKey = 'libs-snapshot-local' // The Artifactory repository key to publish to
-            username = "${artifactory_user}" // The publisher user name
-            password = "${artifactory_password}" // The publisher password
+            repoKey = 'gradle-gradle-dev-local' // The Artifactory repository key to publish to
+            username = "admin" // The publisher user name
+            password = "Password1!" // The publisher password
             // This is an optional section for configuring Ivy publication (when publishIvy = true).
             ivy {
               ivyLayout = '[organization]/[module]/ivy-[revision].xml'
