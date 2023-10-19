@@ -56,13 +56,13 @@ dependencies {
     }
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
-}
+// publishing {
+//     publications {
+//         mavenJava(MavenPublication) {
+//             from components.java
+//         }
+//     }
+// }
 
 artifactory {
     contextUrl = 'http://arti.com/artifactory'
