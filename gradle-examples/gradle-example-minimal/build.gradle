@@ -32,7 +32,7 @@ version = currentVersion
 
 apply plugin: 'com.jfrog.artifactory'
 apply plugin: 'java'
-//apply plugin: 'maven-publish'
+apply plugin: 'maven-publish'
 
 configurations {
     smokeTest.extendsFrom testImplementation
@@ -56,13 +56,13 @@ dependencies {
     }
 }
 
-// publishing {
-//     publications {
-//         mavenJava(MavenPublication) {
-//             from components.java
-//         }
-//     }
-// }
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
 
 artifactory {
     contextUrl = 'http://arti.com/artifactory'
@@ -76,7 +76,7 @@ artifactory {
             // Reference to Gradle publications defined in the build script.
             // This is how we tell the Artifactory Plugin which artifacts should be
             // published to Artifactory.
-            //publications('mavenJava')
+            publications('mavenJava')
             publishArtifacts = true
             // Properties to be attached to the published artifacts.
             properties = ['qa.level': 'basic', 'dev.team' : 'core']
