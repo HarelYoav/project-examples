@@ -1,1 +1,1 @@
-include "shared", "api", ":webservice"
+include "shared", "api", "services:webservice"
